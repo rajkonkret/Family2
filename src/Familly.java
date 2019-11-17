@@ -35,7 +35,7 @@ public class Familly {
 
     public Person oldest() {
         int oldest = 0;
-        Person personOldest=new Person(0,"rad");
+        Person personOldest = family[0];
         for (Person person : family) {
             if (person.getAge() > oldest) {
                 oldest = person.getAge();
