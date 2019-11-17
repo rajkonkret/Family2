@@ -35,6 +35,7 @@ public class upgradAge {
 
         }
         System.out.println("Average: "+familly.average());
+        System.out.println("Youngest "+ familly.youngest().getName());
 
 //        double average = (double) sum / familiCount;
 //        System.out.println("Average: " + average);
