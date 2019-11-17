@@ -1,3 +1,5 @@
+import com.sun.jmx.snmp.internal.SnmpAccessControlModel;
+
 import javax.imageio.plugins.jpeg.JPEGImageReadParam;
 
 public class Familly {
@@ -22,13 +24,25 @@ public class Familly {
 
     public Person youngest() {
         int youngest = family[0].getAge();
-        Person nameOfYoungest = family[0];
+        Person personYoungest = family[0];
 
-        for (Person person: family){
+        for (Person person : family) {
             youngest = Math.min(youngest, person.getAge());
-            nameOfYoungest =person;
+            personYoungest = person;
         }
-        return nameOfYoungest;
+        return personYoungest;
+    }
+
+    public Person oldest() {
+        int oldest = 0;
+        Person personOldest=new Person(0,"rad");
+        for (Person person : family) {
+            if (person.getAge() > oldest) {
+                oldest = person.getAge();
+                personOldest = person;
+            }
+        }
+        return personOldest;
     }
 
 

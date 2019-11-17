@@ -29,13 +29,14 @@ public class upgradAge {
             }
         }
         //System.out.println(Person.sum(personsall));
-        Familly familly =new Familly(personsall);
+        Familly familly = new Familly(personsall);
         for (Person person : personsall) {
-            System.out.println("Imię: "+person.getName()+" wiek: "+person.getAge());
+            System.out.println("Imię: " + person.getName().toUpperCase() + " wiek: " + person.getAge());
 
         }
-        System.out.println("Average: "+familly.average());
-        System.out.println("Youngest "+ familly.youngest().getName());
+        System.out.println("Average: " + familly.average());
+        System.out.println("Youngest " + familly.youngest().getName().toUpperCase());
+        System.out.println("Oldest " + familly.oldest().getName().toUpperCase());
 
 //        double average = (double) sum / familiCount;
 //        System.out.println("Average: " + average);
