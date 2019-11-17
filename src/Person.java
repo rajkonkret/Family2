@@ -7,18 +7,6 @@ public class Person {
         this.name = name;
     }
 
-    public static int sum(Person[] personsall) {
-        int sumAge = 0;
-        for (Person person : personsall) {
-            sumAge += person.age;
-        }
-        return sumAge;
-    }
-
-    public static double average(Person[] personsall) {
-        return (double) sum(personsall) / personsall.length;
-    }
-
     public int getAge() {
         return age;
     }

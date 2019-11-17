@@ -16,7 +16,7 @@ public class upgradAge {
         int numberOfPerson = scanner.nextInt();
         Person[] personsall = new Person[numberOfPerson];
 
-        for (int i=0; i<personsall.length;i++ ){
+        for (int i = 0; i < personsall.length; i++) {
             System.out.println("Podajj członków rodziny: (podaj wiek -1 aby zakończyć)");
             System.out.println("imię: ");
             String name = scanner.next();
@@ -29,10 +29,12 @@ public class upgradAge {
             }
         }
         //System.out.println(Person.sum(personsall));
-        for (Person person:personsall){
-            System.out.println(person.getName().toUpperCase()+" wiek: "+person.getAge());
+        Familly familly =new Familly(personsall);
+        for (Person person : personsall) {
+            System.out.println("Imię: "+person.getName()+" wiek: "+person.getAge());
+
         }
-        System.out.println("Average age "+ Person.average(personsall));
+        System.out.println("Average: "+familly.average());
 
 //        double average = (double) sum / familiCount;
 //        System.out.println("Average: " + average);
